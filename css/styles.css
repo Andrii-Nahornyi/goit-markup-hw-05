@@ -108,7 +108,6 @@ img {
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.19;
-	letter-spacing: 0.03em;
 }
 
 .nav-list {
@@ -117,6 +116,25 @@ img {
 
 .nav-list .item + .item {
 	margin-left: 50px;
+}
+
+.nav-link.accent {
+	position: relative;
+}
+
+.nav-link.accent::after {
+	position: absolute;
+	left: 0;
+	bottom: -1%;
+
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 4px;
+	background-color: currentColor;
+
+	border-radius: 2px;
+	border-width: 0;
 }
 
 .nav-link {
@@ -244,35 +262,6 @@ img {
 	margin-right: 30px;
 }
 
-/* .features-list .item::before {
-	content: '';
-	display: block;
-	height: 120px;
-	border-radius: 4px;
-	margin-bottom: 30px;
-
-	background-repeat: no-repeat;
-	background-size: 70px;
-	background-position: center;
-	background-color:var(--secondary-background-color);
-} */
-
-/* .icon-antenna::before {
-	background-image: url("../images/icons/antenna.svg");
-}
-
-.icon-clock::before {
-	background-image: url("../images/icons/clock.svg");
-}
-
-.icon-diagram::before {
-	background-image: url("../images/icons/diagram.svg");
-}
-
-.icon-austronaut::before {
-	background-image: url("../images/icons/astronaut.svg");
-} */
-
 .svg-container {
 	display: flex;
 	justify-content: center;
@@ -323,6 +312,33 @@ img {
 
 .about-list .item:not(:nth-child(3n)) {
 	margin-right: 30px;
+}
+
+.about-item-overlay {
+	position: relative;
+
+}
+
+.about-overlay-text {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	height: 70px;
+
+	display: inline-flex;
+
+	font-weight: bold;
+	line-height: 1.14;
+	
+	align-items: center;
+	justify-content: center;
+
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+	background: rgba(47, 48, 58, 0.8);
 }
 
 /* Employee section */
@@ -613,7 +629,7 @@ img {
 
 /* КОСТЫЛЬ ПО ОВЕРЛЕЮ*/
 
-.project-item:hover .overlay-text {
+.project-item:hover .project-overlay-text {
 	opacity: 1;
 }
 
@@ -647,7 +663,7 @@ img {
 	1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.overlay-text {
+.project-overlay-text {
 	position: absolute;
 
 	top: 63px;
