@@ -795,6 +795,7 @@ img {
 
 .backdrop.is-hidden .modal {
 	transform: translate(-50%, -50%) scale(0.9);
+
 }
 
 .modal {
@@ -806,11 +807,19 @@ img {
 	min-height: 581px;
 
 	background-color: var(--white-site-color);
+	
+
 	opacity: 1;
 	visibility: visible;
 
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+	0px 1px 1px rgba(0, 0, 0, 0.14), 
+	0px 2px 1px rgba(0, 0, 0, 0.2);
+
 	transform: translate(-50%, -50%) scale(1);
-	transition: transform 250ms var(--timing-function);
+	transition: transform 250ms var(--timing-function), 
+	box-shadow 250ms var(--timing-function);
+	border-radius: 4px;
 }
 
 .modal-btn {
@@ -825,6 +834,7 @@ img {
 
 	background-color: var(--white-site-color);
 	border: 1px solid rgba(0, 0, 0, 0.1);
+	
 	border-radius: 50%;
 }
 
